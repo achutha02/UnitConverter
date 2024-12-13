@@ -113,6 +113,24 @@ fun UnitConverter(modifier: Modifier=Modifier){
                         conversionFactor.value=0.001
                         convertUnits()
                     })
+                    DropdownMenuItem(text={ Text("Inches") }, onClick ={
+                        iExpanded=false
+                        inputUnit="Inches"
+                        conversionFactor.value=39.3700
+                        convertUnits()
+                    })
+                    DropdownMenuItem(text = { Text("Kilometers")}, onClick = {
+                        iExpanded=false
+                        inputUnit="Kilometers"
+                        conversionFactor.value=1000.0000
+                        convertUnits()
+                    })
+                    DropdownMenuItem(text = { Text("Mile")}, onClick = {
+                        oExpanded=false
+                        outputUnit="Mile"
+                        conversionFactor.value=1609.34
+                        convertUnits()
+                    })
                 }
             }
             Spacer(modifier = Modifier.width(16.dp))
@@ -143,6 +161,24 @@ fun UnitConverter(modifier: Modifier=Modifier){
                         oExpanded=false
                         outputUnit="Milimeters"
                         oConversionFactor.value=0.001
+                        convertUnits()
+                    })
+                    DropdownMenuItem(text = { Text("Inches")}, onClick = {
+                        oExpanded=false
+                        outputUnit="Inches"
+                       oConversionFactor.value=39.3700
+                        convertUnits()
+                    })
+                    DropdownMenuItem(text = { Text("Kilometers")}, onClick = {
+                        oExpanded=false
+                        outputUnit="Kilometers"
+                        oConversionFactor.value=1000.0000
+                        convertUnits()
+                    })
+                    DropdownMenuItem(text = { Text("Mile")}, onClick = {
+                        oExpanded=false
+                        outputUnit="Mile"
+                        oConversionFactor.value=1609.34
                         convertUnits()
                     })
                 }
